@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<launch>
+
+<arg name="rvizconfig" default="$(find robot_odometry)/rviz/odom.rviz"/>
+
+<node name="odometry_publisher" pkg="robot_odometry" type="odometry_broadcaster" respawn="false" output="screen"/>
+<node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)"/>
+
+</launch>
